@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Ejercicio 6</title>
+
+<script>
+        function informar() {
+            var mensaje = "Usuario no autorizado...";
+            var usuarios = new Array(3);
+            var claves = new Array(3);
+            usuarios[0] = "CARLOS";
+            usuarios[1] = "JUAN";
+            usuarios[2] = "PEPE";
+
+            claves[0] = "aaaaa"
+            claves[1] = "bbbbb"
+            claves[2] = "ccccc"
+
+            for (i = 0; i < usuarios.length; i++) {
+                if ((usuarios[i] == document.miFormulario.usuario.value.toUpperCase()) &&
+                    (claves[i] == document.miFormulario.password.value)) {
+                    mensaje = "Bienvenido al sistema...";
+                    break;
+                }
+            }
+
+            alert(mensaje);
+            document.miFormulario.botonLimpiar.click();
+            document.miFormulario.usuario.focus();
+        }
+    </script>
+    <style>
+        table {
+            padding: 5px;
+        }
+    </style>
+</head>
+
+<body>
+
+<h2>Password</h2>
+
+<form name="miFormulario" action="javascript:informar()">
+    Introduzca su usuario y clave...<br><br>
+    <table>
+        <tr>
+            <td>usuario:</td>
+            <td><input type=text name="usuario" size=15></td>
+        </tr>
+        <tr>
+            <td>clave:</td>
+            <td><input type=password NAME="password" size=15></td>
+        </tr>
+    </table>
+    <br>
+    <input type=submit name="botonEnviar" value="Enviar">
+    <input type=reset name="botonLimpiar" value="Limpiar">
+</form>
+</body>
+</html>

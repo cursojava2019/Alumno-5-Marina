@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Ejercicio 5</title>
+</head>
+<body>
+  <h1>Conversor de monedas</h1>
+  
+  <form name="conversor">
+  <table>
+  <tr>
+    <td><input type="number" name="euros"> € </td>
+    <td><input type="number" name="pesetas"> ₧ </td>
+  </tr>
+  <tr>
+    <td><input type="button" value="Convertir a euros"
+          onClick="convertirEuros()"></td>
+          
+    <td><input type="button" value="Convertir a pesetas"
+          onClick="convertirPesetas()"></td>
+          
+	<td><input type="reset" value="Borrar"></td>
+  </tr>
+  </table>
+  </form>
+
+  <script type="text/javascript"> 
+  
+  
+  var euro = 166.386;
+
+  function convertirEuros() {
+    document.conversor.euros.value =
+      Math.round(parseInt(document.conversor.pesetas.value) * 100 / euro)
+      / 100;
+  }
+
+  function convertirPesetas() {
+    document.conversor.pesetas.value =
+      Math.round(parseInt(document.conversor.euros.value) * euro);
+  }
+  
+  </script>
+</body>
+</html>
