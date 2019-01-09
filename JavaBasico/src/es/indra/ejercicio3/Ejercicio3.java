@@ -19,6 +19,5 @@ public class Ejercicio3 {
 		Scanner entrada = new Scanner(System.in);
 		System.out.println("Introduzca un dia de la semana: ");
 	}
-		
+
 }
-	
