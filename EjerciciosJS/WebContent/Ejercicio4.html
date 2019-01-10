@@ -5,26 +5,6 @@
 <title>Ejercicio 4</title>
 <style>
 	
-	#div1{
-		background-color: red;
-	}
-	
-	#div2{
-		background-color: blue;
-	}
-	
-	#div3{
-		background-color: yellow;
-	}
-	
-	#div4{
-		background-color: green;
-	}
-	
-	#div5{
-		background-color: purple;
-	}
-	
 	.caja{
 		width: 100px;
 		height: 100px;
@@ -35,15 +15,20 @@
 </style>
 </head>
 <body>
-	
-	<div id="div1" class="caja"></div>
-	<div id="div2" class="caja"></div>
-	<div id="div3" class="caja"></div>
-	<div id="div4" class="caja"></div>
-	<div id="div5" class="caja"></div>
 
+	
+	<div id="div1" class="caja" onMouseOver="fondo('id')" style="background-color: white;"></div>
+	<div id="div2" class="caja" onMouseOver="fondo('id')" style="background-color: red;"></div>
+	<div id="div3" class="caja" onMouseOver="fondo('id')" style="background-color: blue;"></div>
+	<div id="div4" class="caja" onMouseOver="fondo('id')" style="background-color: yellow;"></div>
+	<div id="div5" class="caja" onMouseOver="fondo('id')" style="background-color: purple;"></div>
+	
 	<script type="text/javascript">
-		
+	
+		function fondo(id){
+			var color = document.getElementById(id).style.backgroundColor;
+			document.body.style.backgroundColor = color;
+		}
 		
 	</script>
 </body>
