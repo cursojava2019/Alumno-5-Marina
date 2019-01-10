@@ -17,19 +17,18 @@
 <body>
 
 	
-	<div id="div1" class="caja" onMouseOver="fondo('id')" style="background-color: white;"></div>
-	<div id="div2" class="caja" onMouseOver="fondo('id')" style="background-color: red;"></div>
-	<div id="div3" class="caja" onMouseOver="fondo('id')" style="background-color: blue;"></div>
-	<div id="div4" class="caja" onMouseOver="fondo('id')" style="background-color: yellow;"></div>
-	<div id="div5" class="caja" onMouseOver="fondo('id')" style="background-color: purple;"></div>
+	<div id="div1" class="caja" onMouseOver="fondo('div1')" style="background-color: white;"></div>
+	<div id="div2" class="caja" onMouseOver="fondo('div2')" style="background-color: red;"></div>
+	<div id="div3" class="caja" onMouseOver="fondo('div3')" style="background-color: blue;"></div>
+	<div id="div4" class="caja" onMouseOver="fondo('div4')" style="background-color: yellow;"></div>
+	<div id="div5" class="caja" onMouseOver="fondo('div5')" style="background-color: purple;"></div>
 	
-	<script type="text/javascript">
+	<script type="text/javascript">	
 	
-		function fondo(id){
-			var color = document.getElementById(id).style.backgroundColor;
-			document.body.style.backgroundColor = color;
-		}
-		
+	function fondo(id){
+		var color = document.getElementById(id).style.backgroundColor;
+		document.body.style.backgroundColor = color;
+	}
 	</script>
 </body>
 </html>
