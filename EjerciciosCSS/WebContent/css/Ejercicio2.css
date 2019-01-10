@@ -1,0 +1,32 @@
+@charset "utf-8";
+
+*{
+	font-size: 16px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+#primero p{
+	color: #369;
+}
+
+#primero em{
+	background-color: #FFFFCC;
+	color: #0000BB;
+}
+
+a{
+	color: #C30;
+}
+
+.especial{
+	background-color: black;
+	color: yellow;
+}
+
+span{
+	font-weight: bold;
+}
+
+p{
+	color: grey;
+}
