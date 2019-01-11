@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Ejercicio 10</title>
+
+<script type="text/javascript"> 
+
+	var meses = new Array ("Enero","Febrero","Marzo","Abril","Mayo","Junio","Julio","Agosto","Septiembre","Octubre","Noviembre","Diciembre");
+	var f=new Date();
+	document.write(f.getDate() + " de " + meses[f.getMonth()] + " de " + f.getFullYear());
+	
+	function hoReloj(){ 
+   		momentoActual = new Date(); 
+   		hora = momentoActual.getHours(); 
+   		minuto = momentoActual.getMinutes(); 
+   		segundo = momentoActual.getSeconds(); 
+
+   		horaImprimible = hora + " : " + minuto + " : " + segundo 
+
+   		document.form_reloj.reloj.value = horaImprimible 
+
+   		setTimeout("hoReloj()",1000);
+	} 
+
+	
+</script>
+
+	<body onload="hoReloj()">
+		<form name="form_reloj"> 
+		<input type="text" name="reloj" size="10"> 
+</form> 
+
+</body>
+</html>

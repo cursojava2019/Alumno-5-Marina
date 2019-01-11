@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Ejercicio 12</title>
+
+<script type="text/javascript"> 
+
+function RevCuestionario(){ 
+	
+	var p1 = document.getElementsByName('valor1');
+	
+	var correcta = 0;
+	
+	for (var i=0; i < p1.length; i++){
+		if(p1[i].checked){
+			if(p1[i].value == "a"){
+				correcta++;
+			}
+		}
+	}
+	
+	var p2 = document.getElementsByName('valor2');
+	
+	for (var i=0; i < p2.length; i++){
+		if(p2[i].checked){
+			if(p2[i].value == "c"){
+				correcta++;
+			}
+		}
+	}
+  	alert("Has acertado "+correcta+" de 2");
+  }   
+</script> 
+
+<body> 
+<form name="radios"> 
+    <p>1.- ¿Qué día se celebra el día de Andalucía?</p> 
+    <p><input type="radio" name="valor1" value="a">28 de febrero</p> 
+    <p><input type="radio" name="valor1" value="b">25 de febrero</p> 
+    <p><input type="radio" name="valor1" value="c">27 de febrero</p> 
+    
+    <p>2.- ¿Cual es la capital de Andalucía?</p> 
+    <p><input type="radio" name="valor2" value="a">Granada</p> 
+    <p><input type="radio" name="valor2" value="b">Málaga</p> 
+    <p><input type="radio" name="valor2" value="c">Sevilla</p> 
+
+</form> 
+ 
+<form> 
+    <input type="button" onclick="RevCuestionario();" value="Resultados"> 
+</form>  
+
+</body>
+</html>

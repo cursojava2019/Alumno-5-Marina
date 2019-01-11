@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Ejercicio 8</title>
+
+<script>
+    function tratarTexto() {
+
+        var array_palabras = new Array();
+        var nueva_ventana;
+        var num_palabras;
+
+        array_palabras = miFormulario.miArea.value.split(" ");
+        num_palabras = array_palabras.length;
+
+        document.write("<center>");
+        document.write("<h1>Arrays</h1>");
+        document.write("<h2>Información sobre el texto introducido...:</h2>");
+        document.write("Número de palabras : <strong>" + num_palabras + "</strong>" + "<br>");
+        document.write("Primera palabra : " + array_palabras[0].bold() + "<br>");
+        document.write("Última palabra : " + array_palabras[num_palabras - 1].bold() + "<br>");
+        document.write("Colocadas al revés:<br>" + array_palabras.reverse().join("...").bold() + "<br>");
+        document.write("Ordenadas de la 'a' a la 'z':<BR>" + array_palabras.sort().join("...").bold());
+        document.write("<BR>ordenadas de la 'z' a la 'a':<BR>" + array_palabras.sort().reverse().join("...").bold());
+    }
+</script>
+<style>
+    body {
+        text-align: center;
+    }
+</style>
+</head>
+
+<body>
+    <form name="miFormulario">
+        <strong>Introduce un texto:</strong> <br><br>
+        <textarea name="miArea" rows=5 cols=30></textarea> <br><br>
+        <input type=button value="Enviar" name="miBoton" onClick="tratarTexto()">
+    </form>
+</body>
+
+</html>
